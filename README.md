@@ -28,3 +28,4 @@ graph LR;
     tracked -- "изменения" --> modified
     modified -- "git add"  --> staged
 '''
+
