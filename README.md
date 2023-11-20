@@ -20,12 +20,12 @@
 - tracked - файл зафиксирован с помощью git commit, или же добавлен git add
 - modified - Git нашел отличия между содержимым файлом и содержимым последней сохраненной версии файла
 
-'''mermaid
+```mermaid
 graph LR;
     untracked -- "git add" --> staged
     staged -- "git commit" --> tracked/commited
     staged -- "изменения"  --> modified
     tracked -- "изменения" --> modified
     modified -- "git add"  --> staged
-'''
+```
 
