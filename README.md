@@ -14,3 +14,16 @@
 - git log - получить лог
 - git log --oneline - получить сокращенный лог (сокращенный хэш + сообщение)
 - HEAD - служебный файл, указывает на сделанный последним коммит, может использоваться вместо хэша последнего коммита
+## Статусы
+- untracked - Git не следит за изменениями файла
+- staged - файл попадет в коммит
+- tracked - файл зафиксирован с помощью git commit, или же добавлен git add
+- modified - Git нашел отличия между содержимым файлом и содержимым последней сохраненной версии файла
+'''mermaid
+graph LR;
+    untracked -- "git add" --> staged
+    staged -- "git commit" --> tracked/commited
+    staged -- "изменения"  --> modified
+    tracked -- "изменения" --> modified
+    modified -- "git add"  --> staged
+'''
